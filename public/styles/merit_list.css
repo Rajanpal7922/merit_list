@@ -1,0 +1,33 @@
+/* Merit List Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+.title {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #2C3E50;
+}
+
+.merit-table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.merit-table th, .merit-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.merit-table th {
+    background-color: #3498DB;
+    color: white;
+}
+
+.merit-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
