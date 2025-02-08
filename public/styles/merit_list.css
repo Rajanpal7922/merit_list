@@ -1,33 +1,87 @@
-/* Merit List Page Styling */
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body */
 body {
-    font-family: Arial, sans-serif;
+    background-color: #0F172A;
+    color: white;
     text-align: center;
-    padding: 20px;
+    padding: 50px 20px;
 }
 
-.title {
-    font-size: 28px;
+/* Marquee */
+marquee {
+    font-size: 18px;
+    font-weight: bold;
+    color: #FACC15;
+    background: rgba(255, 204, 0, 0.2);
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: inline-block;
     margin-bottom: 20px;
-    color: #2C3E50;
 }
 
+/* Title */
+.title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #FACC15;
+    text-shadow: 3px 3px 8px rgba(255, 204, 0, 0.6);
+}
+
+/* Merit Table */
 .merit-table {
     width: 80%;
-    margin: 0 auto;
+    margin: auto;
     border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(255, 204, 0, 0.4);
+    transition: 0.3s ease-in-out;
 }
 
-.merit-table th, .merit-table td {
-    border: 1px solid #ddd;
-    padding: 12px;
-    text-align: left;
-}
-
-.merit-table th {
-    background-color: #3498DB;
+/* Table Header */
+.merit-table thead {
+    background: linear-gradient(135deg, #FF8C00, #FF5733);
     color: white;
 }
 
-.merit-table tr:nth-child(even) {
-    background-color: #f2f2f2;
+/* Table Cells */
+.merit-table th, .merit-table td {
+    padding: 15px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Alternate Row Styling */
+.merit-table tbody tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Hover Effect */
+.merit-table tbody tr:hover {
+    background: rgba(255, 204, 0, 0.3);
+    transition: 0.3s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .merit-table {
+        width: 100%;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+    marquee {
+        font-size: 16px;
+    }
 }
