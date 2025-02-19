@@ -157,6 +157,15 @@
                     </table>
                 </div>
             </div>
+            <div id="bms" class="course-section hidden">
+                <h3>BMS (Min Percentage: 72) - Commerce Only</h3>
+                <div class="table-container">
+                    <table>
+                        <tr><th>Name</th><th>DOB</th><th>Email</th><th>Maths Marks</th><th>Percentage</th></tr>
+                        <tbody id="bms-list"></tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -172,7 +181,8 @@
                 "ds": student => student.percentage_12th >= 70 && student.branch === "science",
                 "bcom": student => student.percentage_12th >= 80 && student.branch === "commerce",
                 "bba": student => student.percentage_12th >= 75 && student.branch === "commerce",
-                "baf": student => student.percentage_12th >= 67 && student.branch === "commerce"
+                "baf": student => student.percentage_12th >= 67 && student.branch === "commerce",
+                "bms": student => student.percentage_12th >= 72 && student.branch === "commerce"
             };
     
             Object.keys(categories).forEach(category => {

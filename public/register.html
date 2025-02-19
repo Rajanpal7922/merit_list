@@ -19,7 +19,7 @@
             font-weight: bold;
             display: flex;
             align-items: center;
-            padding-left: 20px;
+            justify-content: center;
         }
         .container {
             background: white;
@@ -32,6 +32,7 @@
         }
         h2 {
             text-align: center;
+            font-size: 22px;
         }
         label {
             font-weight: bold;
@@ -40,10 +41,11 @@
         }
         input, select {
             width: 100%;
-            padding: 10px;
+            padding: 12px;
             margin: 5px 0;
             border: 1px solid #ccc;
             border-radius: 5px;
+            font-size: 16px;
         }
         .btn {
             background: #007bff;
@@ -55,13 +57,18 @@
             border-radius: 5px;
             font-size: 16px;
             margin-top: 15px;
+            transition: background 0.3s ease-in-out;
         }
         .btn:hover {
             background: #0056b3;
         }
-        @media (max-width: 480px) {
+        input[type="file"] {
+            padding: 8px;
+            font-size: 14px;
+        }
+        @media (max-width: 600px) {
             .container {
-                width: 100%;
+                width: 95%;
                 padding: 15px;
             }
             .header {
@@ -71,6 +78,10 @@
             .btn {
                 font-size: 14px;
                 padding: 10px;
+            }
+            input, select {
+                padding: 10px;
+                font-size: 14px;
             }
         }
     </style>

@@ -5,7 +5,6 @@
         "dob": "2006-06-15",
         "email_id": "aarav.sharma@gmail.com",
         "mobile_number": "987654xxxx",
-        "department": "science",
         "branch": "commerce",
         "percentage_12th": 85,
         "maths_marks": 92
@@ -16,7 +15,6 @@
         "dob": "2005-09-21",
         "email_id": "ishika.verma@gmail.com",
         "mobile_number": "876543xxxx",
-        "department": "science",
         "branch": "science",
         "percentage_12th": 78,
         "maths_marks": 88
@@ -27,7 +25,6 @@
         "dob": "2007-02-11",
         "email_id": "rohan.patil@gmail.com",
         "mobile_number": "765432xxxx",
-        "department": "science",
         "branch": "commerce",
         "percentage_12th": 90,
         "maths_marks": 95
@@ -38,7 +35,6 @@
         "dob": "2006-11-03",
         "email_id": "neha.joshi@gmail.com",
         "mobile_number": "654321xxxx",
-        "department": "science",
         "branch": "science",
         "percentage_12th": 82,
         "maths_marks": 89
@@ -49,7 +45,6 @@
         "dob": "2005-07-08",
         "email_id": "vihaan.mehta@gmail.com",
         "mobile_number": "543210xxxx",
-        "department": "science",
         "branch": "commerce",
         "percentage_12th": 88,
         "maths_marks": 93
@@ -60,7 +55,6 @@
         "dob": "2007-05-19",
         "email_id": "sanya.desai@gmail.com",
         "mobile_number": "432109xxxx",
-        "department": "science",
         "branch": "science",
         "percentage_12th": 75,
         "maths_marks": 80
@@ -71,7 +65,6 @@
         "dob": "2006-01-25",
         "email_id": "kabir.kapoor@gmail.com",
         "mobile_number": "321098xxxx",
-        "department": "science",
         "branch": "commerce",
         "percentage_12th": 91,
         "maths_marks": 97
@@ -82,7 +75,6 @@
         "dob": "2005-08-30",
         "email_id": "meera.iyer@gmail.com",
         "mobile_number": "210987xxxx",
-        "department": "science",
         "branch": "science",
         "percentage_12th": 79,
         "maths_marks": 85
@@ -93,7 +85,6 @@
         "dob": "2007-03-17",
         "email_id": "rahul.nair@gmail.com",
         "mobile_number": "109876xxxx",
-        "department": "science",
         "branch": "commerce",
         "percentage_12th": 83,
         "maths_marks": 90
@@ -104,7 +95,6 @@
         "dob": "2006-12-22",
         "email_id": "ananya.singh@gmail.com",
         "mobile_number": "198765xxxx",
-        "department": "science",
         "branch": "science",
         "percentage_12th": 87,
         "maths_marks": 92
@@ -115,7 +105,6 @@
         "dob": "2005-04-14",
         "email_id": "yash.tiwari@gmail.com",
         "mobile_number": "987650xxxx",
-        "department": "commerce",
         "branch": "science",
         "percentage_12th": 72,
         "maths_marks": 65
@@ -126,7 +115,6 @@
         "dob": "2006-10-09",
         "email_id": "priya.gupta@gmail.com",
         "mobile_number": "876540xxxx",
-        "department": "commerce",
         "branch": "commerce",
         "percentage_12th": 80,
         "maths_marks": 78
@@ -137,7 +125,6 @@
         "dob": "2007-07-28",
         "email_id": "harsh.malhotra@gmail.com",
         "mobile_number": "765430xxxx",
-        "department": "commerce",
         "branch": "science",
         "percentage_12th": 85,
         "maths_marks": 82
@@ -148,7 +135,6 @@
         "dob": "2005-05-05",
         "email_id": "sneha.reddy@gmail.com",
         "mobile_number": "654320xxxx",
-        "department": "commerce",
         "branch": "commerce",
         "percentage_12th": 77,
         "maths_marks": 70
@@ -159,7 +145,6 @@
         "dob": "2006-11-12",
         "email_id": "amit.bajaj@gmail.com",
         "mobile_number": "543210xxxx",
-        "department": "commerce",
         "branch": "science",
         "percentage_12th": 82,
         "maths_marks": 79
@@ -170,7 +155,6 @@
         "dob": "2007-06-03",
         "email_id": "pooja.saxena@gmail.com",
         "mobile_number": "432109xxxx",
-        "department": "commerce",
         "branch": "commerce",
         "percentage_12th": 88,
         "maths_marks": 85
@@ -181,7 +165,6 @@
         "dob": "2005-09-19",
         "email_id": "vikas.chopra@gmail.com",
         "mobile_number": "321098xxxx",
-        "department": "commerce",
         "branch": "science",
         "percentage_12th": 75,
         "maths_marks": 72
@@ -192,7 +175,6 @@
         "dob": "2006-01-07",
         "email_id": "kavya.pandey@gmail.com",
         "mobile_number": "210987xxxx",
-        "department": "commerce",
         "branch": "commerce",
         "percentage_12th": 79,
         "maths_marks": 74
@@ -203,7 +185,6 @@
         "dob": "2007-08-29",
         "email_id": "raj.mishra@gmail.com",
         "mobile_number": "109876xxxx",
-        "department": "commerce",
         "branch": "science",
         "percentage_12th": 83,
         "maths_marks": 81
@@ -214,7 +195,6 @@
         "dob": "2006-03-15",
         "email_id": "nidhi.kumar@gmail.com",
         "mobile_number": "198765xxxx",
-        "department": "commerce",
         "branch": "commerce",
         "percentage_12th": 86,
         "maths_marks": 87
