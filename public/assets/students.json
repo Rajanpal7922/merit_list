@@ -1,0 +1,222 @@
+[
+    {
+        "first_name": "Aarav",
+        "last_name": "Sharma",
+        "dob": "2006-06-15",
+        "email_id": "aarav.sharma@gmail.com",
+        "mobile_number": "987654xxxx",
+        "department": "science",
+        "branch": "commerce",
+        "percentage_12th": 85,
+        "maths_marks": 92
+    },
+    {
+        "first_name": "Ishika",
+        "last_name": "Verma",
+        "dob": "2005-09-21",
+        "email_id": "ishika.verma@gmail.com",
+        "mobile_number": "876543xxxx",
+        "department": "science",
+        "branch": "science",
+        "percentage_12th": 78,
+        "maths_marks": 88
+    },
+    {
+        "first_name": "Rohan",
+        "last_name": "Patil",
+        "dob": "2007-02-11",
+        "email_id": "rohan.patil@gmail.com",
+        "mobile_number": "765432xxxx",
+        "department": "science",
+        "branch": "commerce",
+        "percentage_12th": 90,
+        "maths_marks": 95
+    },
+    {
+        "first_name": "Neha",
+        "last_name": "Joshi",
+        "dob": "2006-11-03",
+        "email_id": "neha.joshi@gmail.com",
+        "mobile_number": "654321xxxx",
+        "department": "science",
+        "branch": "science",
+        "percentage_12th": 82,
+        "maths_marks": 89
+    },
+    {
+        "first_name": "Vihaan",
+        "last_name": "Mehta",
+        "dob": "2005-07-08",
+        "email_id": "vihaan.mehta@gmail.com",
+        "mobile_number": "543210xxxx",
+        "department": "science",
+        "branch": "commerce",
+        "percentage_12th": 88,
+        "maths_marks": 93
+    },
+    {
+        "first_name": "Sanya",
+        "last_name": "Desai",
+        "dob": "2007-05-19",
+        "email_id": "sanya.desai@gmail.com",
+        "mobile_number": "432109xxxx",
+        "department": "science",
+        "branch": "science",
+        "percentage_12th": 75,
+        "maths_marks": 80
+    },
+    {
+        "first_name": "Kabir",
+        "last_name": "Kapoor",
+        "dob": "2006-01-25",
+        "email_id": "kabir.kapoor@gmail.com",
+        "mobile_number": "321098xxxx",
+        "department": "science",
+        "branch": "commerce",
+        "percentage_12th": 91,
+        "maths_marks": 97
+    },
+    {
+        "first_name": "Meera",
+        "last_name": "Iyer",
+        "dob": "2005-08-30",
+        "email_id": "meera.iyer@gmail.com",
+        "mobile_number": "210987xxxx",
+        "department": "science",
+        "branch": "science",
+        "percentage_12th": 79,
+        "maths_marks": 85
+    },
+    {
+        "first_name": "Rahul",
+        "last_name": "Nair",
+        "dob": "2007-03-17",
+        "email_id": "rahul.nair@gmail.com",
+        "mobile_number": "109876xxxx",
+        "department": "science",
+        "branch": "commerce",
+        "percentage_12th": 83,
+        "maths_marks": 90
+    },
+    {
+        "first_name": "Ananya",
+        "last_name": "Singh",
+        "dob": "2006-12-22",
+        "email_id": "ananya.singh@gmail.com",
+        "mobile_number": "198765xxxx",
+        "department": "science",
+        "branch": "science",
+        "percentage_12th": 87,
+        "maths_marks": 92
+    },
+    {
+        "first_name": "Yash",
+        "last_name": "Tiwari",
+        "dob": "2005-04-14",
+        "email_id": "yash.tiwari@gmail.com",
+        "mobile_number": "987650xxxx",
+        "department": "commerce",
+        "branch": "science",
+        "percentage_12th": 72,
+        "maths_marks": 65
+    },
+    {
+        "first_name": "Priya",
+        "last_name": "Gupta",
+        "dob": "2006-10-09",
+        "email_id": "priya.gupta@gmail.com",
+        "mobile_number": "876540xxxx",
+        "department": "commerce",
+        "branch": "commerce",
+        "percentage_12th": 80,
+        "maths_marks": 78
+    },
+    {
+        "first_name": "Harsh",
+        "last_name": "Malhotra",
+        "dob": "2007-07-28",
+        "email_id": "harsh.malhotra@gmail.com",
+        "mobile_number": "765430xxxx",
+        "department": "commerce",
+        "branch": "science",
+        "percentage_12th": 85,
+        "maths_marks": 82
+    },
+    {
+        "first_name": "Sneha",
+        "last_name": "Reddy",
+        "dob": "2005-05-05",
+        "email_id": "sneha.reddy@gmail.com",
+        "mobile_number": "654320xxxx",
+        "department": "commerce",
+        "branch": "commerce",
+        "percentage_12th": 77,
+        "maths_marks": 70
+    },
+    {
+        "first_name": "Amit",
+        "last_name": "Bajaj",
+        "dob": "2006-11-12",
+        "email_id": "amit.bajaj@gmail.com",
+        "mobile_number": "543210xxxx",
+        "department": "commerce",
+        "branch": "science",
+        "percentage_12th": 82,
+        "maths_marks": 79
+    },
+    {
+        "first_name": "Pooja",
+        "last_name": "Saxena",
+        "dob": "2007-06-03",
+        "email_id": "pooja.saxena@gmail.com",
+        "mobile_number": "432109xxxx",
+        "department": "commerce",
+        "branch": "commerce",
+        "percentage_12th": 88,
+        "maths_marks": 85
+    },
+    {
+        "first_name": "Vikas",
+        "last_name": "Chopra",
+        "dob": "2005-09-19",
+        "email_id": "vikas.chopra@gmail.com",
+        "mobile_number": "321098xxxx",
+        "department": "commerce",
+        "branch": "science",
+        "percentage_12th": 75,
+        "maths_marks": 72
+    },
+    {
+        "first_name": "Kavya",
+        "last_name": "Pandey",
+        "dob": "2006-01-07",
+        "email_id": "kavya.pandey@gmail.com",
+        "mobile_number": "210987xxxx",
+        "department": "commerce",
+        "branch": "commerce",
+        "percentage_12th": 79,
+        "maths_marks": 74
+    },
+    {
+        "first_name": "Raj",
+        "last_name": "Mishra",
+        "dob": "2007-08-29",
+        "email_id": "raj.mishra@gmail.com",
+        "mobile_number": "109876xxxx",
+        "department": "commerce",
+        "branch": "science",
+        "percentage_12th": 83,
+        "maths_marks": 81
+    },
+    {
+        "first_name": "Nidhi",
+        "last_name": "Kumar",
+        "dob": "2006-03-15",
+        "email_id": "nidhi.kumar@gmail.com",
+        "mobile_number": "198765xxxx",
+        "department": "commerce",
+        "branch": "commerce",
+        "percentage_12th": 86,
+        "maths_marks": 87
+    }
+]

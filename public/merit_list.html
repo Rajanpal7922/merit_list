@@ -3,43 +3,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MCC Merit Lists</title>
-    <link rel="stylesheet" href="styles/merit_list.css">
+    <title>Merit List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            background: #2980B9;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .course-section {
+            margin-bottom: 20px;
+        }
+        h3 {
+            background: #2C3E50;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .table-container {
+            overflow-x: auto; /* Scroll on small screens */
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+            min-width: 600px; /* Ensures better readability */
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+            white-space: nowrap; /* Prevent text wrap */
+        }
+        th {
+            background: #34495E;
+            color: white;
+        }
+        .hidden {
+            display: none;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            .container {
+                padding: 15px;
+            }
+            h2 {
+                font-size: 20px;
+                padding: 8px;
+            }
+            h3 {
+                font-size: 18px;
+                padding: 8px;
+            }
+            th, td {
+                padding: 8px;
+                font-size: 14px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <marquee direction="left" scrollamount="5">
-        🔔 Next merit list will be announced after 10 days! 🔔
-    </marquee>
+
+    <div class="container">
+        <h2>Merit List - Selected Students</h2>
+
+        <div id="course-sections">
+            <div id="it" class="course-section hidden">
+                <h3>IT (Min Maths: 75) - Open to Science & Commerce</h3>
+                <div class="table-container">
+                    <table>
+                        <tr><th>Name</th><th>DOB</th><th>Email</th><th>Maths Marks</th><th>Percentage</th></tr>
+                        <tbody id="it-list"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div id="cs" class="course-section hidden">
+                <h3>CS (Min Percentage: 70) - Science Only</h3>
+                <div class="table-container">
+                    <table>
+                        <tr><th>Name</th><th>DOB</th><th>Email</th><th>Maths Marks</th><th>Percentage</th></tr>
+                        <tbody id="cs-list"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div id="bca" class="course-section hidden">
+                <h3>BCA (Min Percentage: 60) - Science Only</h3>
+                <div class="table-container">
+                    <table>
+                        <tr><th>Name</th><th>DOB</th><th>Email</th><th>Maths Marks</th><th>Percentage</th></tr>
+                        <tbody id="bca-list"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div id="ds" class="course-section hidden">
+                <h3>DS (Min Percentage: 70) - Science Only</h3>
+                <div class="table-container">
+                    <table>
+                        <tr><th>Name</th><th>DOB</th><th>Email</th><th>Maths Marks</th><th>Percentage</th></tr>
+                        <tbody id="ds-list"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div id="bcom" class="course-section hidden">
+                <h3>BCOM (Min Percentage: 80) - Commerce Only</h3>
+                <div class="table-container">
+                    <table>
+                        <tr><th>Name</th><th>DOB</th><th>Email</th><th>Maths Marks</th><th>Percentage</th></tr>
+                        <tbody id="bcom-list"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div id="bba" class="course-section hidden">
+                <h3>BBA (Min Percentage: 75) - Commerce Only</h3>
+                <div class="table-container">
+                    <table>
+                        <tr><th>Name</th><th>DOB</th><th>Email</th><th>Maths Marks</th><th>Percentage</th></tr>
+                        <tbody id="bba-list"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div id="baf" class="course-section hidden">
+                <h3>BAF (Min Percentage: 67) - Commerce Only</h3>
+                <div class="table-container">
+                    <table>
+                        <tr><th>Name</th><th>DOB</th><th>Email</th><th>Maths Marks</th><th>Percentage</th></tr>
+                        <tbody id="baf-list"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        async function loadStudents() {
+            const response = await fetch("assets/students.json");
+            const students = await response.json();
     
-
-    <h1 class="title">1st Merit List</h1>
-
-    <table class="merit-table">
-        <thead>
-            <tr>
-                <th>Department</th>
-                <th>Minimum Marks</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>BSc. Information Technology</td>
-                <td>Maths = 75</td>
-            </tr>
-            <tr>
-                <td>Bsc. Computer Science</td>
-                <td>Percentage = 70</td>
-            </tr>
-            <tr>
-                <td>Bsc. Computer applications</td>
-                <td>Percentage = 65</td>
-            </tr>
-            <tr>
-                <td>Bsc. Data Science</td>
-                <td>Percentage = 60</td>
-            </tr>
-        </tbody>
-    </table>
+            const categories = {
+                "it": student => student.maths_marks >= 75,  
+                "cs": student => student.percentage_12th >= 70 && student.branch === "science",
+                "bca": student => student.percentage_12th >= 60 && student.branch === "science",
+                "ds": student => student.percentage_12th >= 70 && student.branch === "science",
+                "bcom": student => student.percentage_12th >= 80 && student.branch === "commerce",
+                "bba": student => student.percentage_12th >= 75 && student.branch === "commerce",
+                "baf": student => student.percentage_12th >= 67 && student.branch === "commerce"
+            };
+    
+            Object.keys(categories).forEach(category => {
+                let filteredStudents = students.filter(categories[category]);
+    
+                // 🔥 Sorting by Percentage (Highest to Lowest)
+                filteredStudents.sort((a, b) => b.percentage_12th - a.percentage_12th);
+    
+                if (filteredStudents.length > 0) {
+                    document.getElementById(category).classList.remove("hidden");
+                    const tableBody = document.getElementById(category + "-list");
+                    tableBody.innerHTML = ""; // Clear previous entries
+    
+                    filteredStudents.forEach(student => {
+                        const row = `<tr>
+                            <td>${student.first_name} ${student.last_name}</td>
+                            <td>${student.dob}</td>
+                            <td>${student.email_id}</td>
+                            <td>${student.maths_marks}</td>
+                            <td>${student.percentage_12th}</td>
+                        </tr>`;
+                        tableBody.innerHTML += row;
+                    });
+                }
+            });
+        }
+    
+        window.onload = loadStudents;
+    </script>
 
 </body>
 </html>
