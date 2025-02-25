@@ -26,6 +26,14 @@
             padding: 10px;
             border-radius: 5px;
         }
+        .filter-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .filter-container select {
+            padding: 8px;
+            font-size: 16px;
+        }
         .course-section {
             margin-bottom: 20px;
         }
@@ -37,19 +45,19 @@
             text-align: center;
         }
         .table-container {
-            overflow-x: auto; /* Scroll on small screens */
+            overflow-x: auto;
         }
         table {
             width: 100%;
             border-collapse: collapse;
             margin: 10px 0;
-            min-width: 600px; /* Ensures better readability */
+            min-width: 600px;
         }
         th, td {
             border: 1px solid #ddd;
             padding: 10px;
             text-align: left;
-            white-space: nowrap; /* Prevent text wrap */
+            white-space: nowrap;
         }
         th {
             background: #34495E;
@@ -59,7 +67,6 @@
             display: none;
         }
 
-        /* Responsive Design */
         @media (max-width: 768px) {
             body {
                 padding: 10px;
@@ -87,93 +94,68 @@
     <div class="container">
         <h2>Merit List - Selected Students</h2>
 
+        <div class="filter-container">
+            <label for="filter">Filter by Stream: </label>
+            <select id="filter">
+                <option value="all">All</option>
+                <option value="science">Science</option>
+                <option value="commerce">Commerce</option>
+            </select>
+        </div>
+
         <div id="course-sections">
             <div id="it" class="course-section hidden">
                 <h3>IT (Min Maths: 75) - Open to Science & Commerce</h3>
-                <div class="table-container">
-                    <table>
-                        <tr><th>Name</th><th>DOB</th><th>Email</th><th>Maths Marks</th><th>Percentage</th></tr>
-                        <tbody id="it-list"></tbody>
-                    </table>
-                </div>
+                <div class="table-container"><table><tr><th>Name</th><th>DOB</th><th>Email</th><th>Maths Marks</th><th>Percentage</th></tr><tbody id="it-list"></tbody></table></div>
             </div>
 
             <div id="cs" class="course-section hidden">
                 <h3>CS (Min Percentage: 70) - Science Only</h3>
-                <div class="table-container">
-                    <table>
-                        <tr><th>Name</th><th>DOB</th><th>Email</th><th>Maths Marks</th><th>Percentage</th></tr>
-                        <tbody id="cs-list"></tbody>
-                    </table>
-                </div>
+                <div class="table-container"><table><tr><th>Name</th><th>DOB</th><th>Email</th><th>Maths Marks</th><th>Percentage</th></tr><tbody id="cs-list"></tbody></table></div>
             </div>
 
             <div id="bca" class="course-section hidden">
-                <h3>BCA (Min Percentage: 60) - Science Only</h3>
-                <div class="table-container">
-                    <table>
-                        <tr><th>Name</th><th>DOB</th><th>Email</th><th>Maths Marks</th><th>Percentage</th></tr>
-                        <tbody id="bca-list"></tbody>
-                    </table>
-                </div>
+                <h3>BCA (Min Percentage: 60) - Open to Science & Commerce</h3>
+                <div class="table-container"><table><tr><th>Name</th><th>DOB</th><th>Email</th><th>Maths Marks</th><th>Percentage</th></tr><tbody id="bca-list"></tbody></table></div>
             </div>
 
             <div id="ds" class="course-section hidden">
                 <h3>DS (Min Percentage: 70) - Science Only</h3>
-                <div class="table-container">
-                    <table>
-                        <tr><th>Name</th><th>DOB</th><th>Email</th><th>Maths Marks</th><th>Percentage</th></tr>
-                        <tbody id="ds-list"></tbody>
-                    </table>
-                </div>
+                <div class="table-container"><table><tr><th>Name</th><th>DOB</th><th>Email</th><th>Maths Marks</th><th>Percentage</th></tr><tbody id="ds-list"></tbody></table></div>
             </div>
 
             <div id="bcom" class="course-section hidden">
                 <h3>BCOM (Min Percentage: 80) - Commerce Only</h3>
-                <div class="table-container">
-                    <table>
-                        <tr><th>Name</th><th>DOB</th><th>Email</th><th>Maths Marks</th><th>Percentage</th></tr>
-                        <tbody id="bcom-list"></tbody>
-                    </table>
-                </div>
+                <div class="table-container"><table><tr><th>Name</th><th>DOB</th><th>Email</th><th>Maths Marks</th><th>Percentage</th></tr><tbody id="bcom-list"></tbody></table></div>
             </div>
 
             <div id="bba" class="course-section hidden">
                 <h3>BBA (Min Percentage: 75) - Commerce Only</h3>
-                <div class="table-container">
-                    <table>
-                        <tr><th>Name</th><th>DOB</th><th>Email</th><th>Maths Marks</th><th>Percentage</th></tr>
-                        <tbody id="bba-list"></tbody>
-                    </table>
-                </div>
+                <div class="table-container"><table><tr><th>Name</th><th>DOB</th><th>Email</th><th>Maths Marks</th><th>Percentage</th></tr><tbody id="bba-list"></tbody></table></div>
             </div>
 
             <div id="baf" class="course-section hidden">
                 <h3>BAF (Min Percentage: 67) - Commerce Only</h3>
-                <div class="table-container">
-                    <table>
-                        <tr><th>Name</th><th>DOB</th><th>Email</th><th>Maths Marks</th><th>Percentage</th></tr>
-                        <tbody id="baf-list"></tbody>
-                    </table>
-                </div>
+                <div class="table-container"><table><tr><th>Name</th><th>DOB</th><th>Email</th><th>Maths Marks</th><th>Percentage</th></tr><tbody id="baf-list"></tbody></table></div>
             </div>
+
             <div id="bms" class="course-section hidden">
                 <h3>BMS (Min Percentage: 72) - Commerce Only</h3>
-                <div class="table-container">
-                    <table>
-                        <tr><th>Name</th><th>DOB</th><th>Email</th><th>Maths Marks</th><th>Percentage</th></tr>
-                        <tbody id="bms-list"></tbody>
-                    </table>
-                </div>
+                <div class="table-container"><table><tr><th>Name</th><th>DOB</th><th>Email</th><th>Maths Marks</th><th>Percentage</th></tr><tbody id="bms-list"></tbody></table></div>
             </div>
         </div>
     </div>
 
     <script>
+        let studentsData = [];
+
         async function loadStudents() {
             const response = await fetch("assets/students.json");
-            const students = await response.json();
-    
+            studentsData = await response.json();
+            displayStudents("all");
+        }
+
+        function displayStudents(filter) {
             const categories = {
                 "it": student => student.maths_marks >= 75,  
                 "cs": student => student.percentage_12th >= 70 && student.branch === "science",
@@ -184,32 +166,36 @@
                 "baf": student => student.percentage_12th >= 67 && student.branch === "commerce",
                 "bms": student => student.percentage_12th >= 72 && student.branch === "commerce"
             };
-    
+
+            const filterMap = {
+                "all": Object.keys(categories),
+                "science": ["it", "cs", "bca", "ds"],
+                "commerce": ["it", "bca", "bcom", "bba", "baf", "bms"]
+            };
+
             Object.keys(categories).forEach(category => {
-                let filteredStudents = students.filter(categories[category]);
-    
-                // 🔥 Sorting by Percentage (Highest to Lowest)
-                filteredStudents.sort((a, b) => b.percentage_12th - a.percentage_12th);
-    
-                if (filteredStudents.length > 0) {
-                    document.getElementById(category).classList.remove("hidden");
-                    const tableBody = document.getElementById(category + "-list");
-                    tableBody.innerHTML = ""; // Clear previous entries
-    
-                    filteredStudents.forEach(student => {
-                        const row = `<tr>
-                            <td>${student.first_name} ${student.last_name}</td>
-                            <td>${student.dob}</td>
-                            <td>${student.email_id}</td>
-                            <td>${student.maths_marks}</td>
-                            <td>${student.percentage_12th}</td>
-                        </tr>`;
-                        tableBody.innerHTML += row;
-                    });
+                const section = document.getElementById(category);
+                section.classList.add("hidden");
+                
+                if (filterMap[filter].includes(category)) {
+                    let filteredStudents = studentsData.filter(categories[category]);
+                    filteredStudents.sort((a, b) => b.percentage_12th - a.percentage_12th);
+
+                    if (filteredStudents.length > 0) {
+                        section.classList.remove("hidden");
+                        const tableBody = document.getElementById(category + "-list");
+                        tableBody.innerHTML = filteredStudents.map(student => `
+                            <tr><td>${student.first_name} ${student.last_name}</td><td>${student.dob}</td><td>${student.email_id}</td><td>${student.maths_marks}</td><td>${student.percentage_12th}</td></tr>
+                        `).join("");
+                    }
                 }
             });
         }
-    
+
+        document.getElementById("filter").addEventListener("change", (e) => {
+            displayStudents(e.target.value);
+        });
+
         window.onload = loadStudents;
     </script>
 
