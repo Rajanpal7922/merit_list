@@ -111,7 +111,7 @@
 
             <div id="cs" class="course-section hidden">
                 <h3>CS (Min Percentage: 70) - Science Only</h3>
-                <div class="table-container"><table><tr><th>Name</th><th>DOB</th><th>Email</th><th>Maths Marks</th><th>Percentage</th></tr><tbody id="cs-list"></tbody></table></div>
+                <div class="table-container"><table><tr><th>Name</th><th>DOB</th><th>Maths Marks</th><th>Percentage</th></tr><tbody id="cs-list"></tbody></table></div>
             </div>
 
             <div id="bca" class="course-section hidden">
@@ -150,16 +150,31 @@
         let studentsData = [];
 
         async function loadStudents() {
-            const response = await fetch("assets/students.json");
-            studentsData = await response.json();
+            // Load from JSON file
+            let jsonStudents = [];
+            try {
+                const response = await fetch("assets/students.json");
+                jsonStudents = await response.json();
+            } catch (e) {
+                console.log("No JSON file found or error loading it:", e);
+            }
+
+            // Load from localStorage
+            const localStudents = JSON.parse(localStorage.getItem('students')) || [];
+            
+            // Combine and remove duplicates by email_id (assuming email is unique)
+            studentsData = [...jsonStudents, ...localStudents].reduce((unique, student) => {
+                return unique.some(s => s.email_id === student.email_id) ? unique : [...unique, student];
+            }, []);
+
             displayStudents("all");
         }
 
         function displayStudents(filter) {
             const categories = {
-                "it": student => student.maths_marks >= 75,  
+                "it": student => student.maths_marks >= 75,
                 "cs": student => student.percentage_12th >= 70 && student.branch === "science",
-                "bca": student => student.percentage_12th >= 60 && student.branch === "science",
+                "bca": student => student.percentage_12th >= 60, // Open to both streams
                 "ds": student => student.percentage_12th >= 70 && student.branch === "science",
                 "bcom": student => student.percentage_12th >= 80 && student.branch === "commerce",
                 "bba": student => student.percentage_12th >= 75 && student.branch === "commerce",
@@ -185,7 +200,13 @@
                         section.classList.remove("hidden");
                         const tableBody = document.getElementById(category + "-list");
                         tableBody.innerHTML = filteredStudents.map(student => `
-                            <tr><td>${student.first_name} ${student.last_name}</td><td>${student.dob}</td><td>${student.email_id}</td><td>${student.maths_marks}</td><td>${student.percentage_12th}</td></tr>
+                            <tr>
+                                <td>${student.first_name} ${student.last_name}</td>
+                                <td>${student.dob}</td>
+                                <td>${student.email_id}</td>
+                                <td>${student.maths_marks}</td>
+                                <td>${student.percentage_12th}</td>
+                            </tr>
                         `).join("");
                     }
                 }
@@ -198,6 +219,5 @@
 
         window.onload = loadStudents;
     </script>
-
 </body>
 </html>
