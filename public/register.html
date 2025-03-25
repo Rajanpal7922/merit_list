@@ -11,7 +11,7 @@
             padding: 0;
             box-sizing: border-box;
         }
-
+    
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
@@ -19,7 +19,7 @@
             flex-direction: column;
             align-items: center;
         }
-
+    
         header {
             width: 100%;
             background-color: #0b1120;
@@ -32,44 +32,54 @@
             left: 0;
             height: 60px;
         }
-
+    
         .logo-img {
             height: 40px;
             margin-right: 10px;
         }
-
+    
         .title {
             font-size: 20px;
             font-weight: bold;
         }
-
+    
         .container {
             margin-top: 80px;
             width: 90%;
-            max-width: 600px;
+            max-width: 1100px; /* Increased width */
+        min-height: 600px; /* Increased height */
             background: white;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-
+    
         .section {
             display: none;
         }
-
+    
         .section.active {
             display: block;
         }
-
-        .form-group {
+    
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 15px;
             margin-bottom: 15px;
         }
-
+    
+        .form-group {
+            flex: 1;
+            min-width: 22%; /* Ensures 4 input fields per row */
+        }
+    
         label {
             display: block;
             font-weight: bold;
         }
-
+    
         input,
         select {
             width: 100%;
@@ -78,7 +88,7 @@
             border: 1px solid #ccc;
             border-radius: 5px;
         }
-
+    
         button {
             background-color: #0b1120;
             color: white;
@@ -88,7 +98,7 @@
             border-radius: 5px;
             width: 100%;
         }
-
+    
         .popup {
             display: none;
             position: fixed;
@@ -103,13 +113,13 @@
             width: 350px;
             max-width: 90%;
         }
-
+    
         .popup p {
             margin-bottom: 20px;
             font-size: 1.2em;
             color: #333;
         }
-
+    
         .popup button {
             padding: 10px 20px;
             background: #2e7d32;
@@ -119,7 +129,33 @@
             cursor: pointer;
             transition: background 0.3s ease;
         }
+    
+        /* Responsive Design for Smaller Screens */
+        @media (max-width: 1024px) {
+            .container {
+                max-width: 700px;
+            }
+    
+            .form-group {
+                min-width: 45%; /* 2 fields per row on medium screens */
+            }
+        }
+    
+        @media (max-width: 768px) {
+            .container {
+                max-width: 500px;
+            }
+    
+            .form-group {
+                min-width: 100%; /* 1 field per row on small screens */
+            }
+    
+            .row {
+                flex-direction: column;
+            }
+        }
     </style>
+    
 </head>
 
 <body>
@@ -130,32 +166,195 @@
 
     <div class="container">
         <div id="section1" class="section active">
-            <h2>Personal Info</h2>
-            <div class="form-group"><label>First Name</label><input type="text" id="first_name" required></div>
-            <div class="form-group"><label>Last Name</label><input type="text" id="last_name" required></div>
-            <div class="form-group"><label>Date of Birth</label><input type="date" id="dob" required></div>
-            <div class="form-group"><label>Email ID</label><input type="email" id="email_id" required></div>
-            <div class="form-group"><label>Mobile Number</label><input type="tel" id="mobile_number" required></div>
-            <div class="form-group"><label>12th Percentage</label><input type="number" id="percentage_12th" min="0"
-                    max="100" required></div>
-            <div class="form-group"><label>Maths Marks</label><input type="number" id="maths_marks" min="0" max="100"
-                    required></div>
-            <div class="form-group"><label>Department</label>
-                <select id="branch" required>
-                    <option value="Science">Science</option>
-                    <option value="Commerce">Commerce</option>
+            <h2 style="color: #28a745;">Student Personal Info</h2>
+
+            
+            <div class="row">
+                <div class="form-group"><label>Title</label>
+                    <select id="title">
+                        <option value="Mr.">Mr.</option>
+                        <option value="Ms.">Ms.</option>
+                    </select>
+                </div>
+                <div class="form-group"><label>Last Name</label><input type="text" id="last_name"></div>
+                <div class="form-group"><label>First Name</label><input type="text" id="first_name"></div>
+                <div class="form-group"><label>Middle Name</label><input type="text" id="middle_name"></div>
+            </div>
+        
+            <div class="row">
+                <div class="form-group"><label>Mobile Number</label><input type="number" id="mobile_number" maxlength="10"></div>
+                <div class="form-group"><label>Phone/WhatsApp No.</label><input type="number" id="whatsapp_number" maxlength="10"></div>
+                <div class="form-group"><label>Marital Status</label>
+                    <select id="marital_status">
+                        <option value="Married">Married</option>
+                        <option value="Unmarried">Unmarried</option>
+                    </select>
+                </div>
+                <div class="form-group"><label>Blood Group</label>
+                    <select id="blood_group">
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                    </select>
+                </div>
+            </div>
+        
+            <div class="row">
+                <div class="form-group"><label>Gender</label>
+                    <select id="gender">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group"><label>Date of Birth</label><input type="date" id="dob"></div>
+                <div class="form-group"><label>Occupation</label>
+                    <select id="occupation">
+                        <option value="Student">Student</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group"><label>Mother Language</label>
+                    <select id="mother_language">
+                        <option value="Hindi">Hindi</option>
+                        <option value="Marathi">Marathi</option>
+                        <option value="Gujarati">Gujarati</option>
+                        <option value="Telugu">Telugu</option>
+                        <option value="Tulu">Tulu</option>
+                    </select>
+                </div>
+            </div>
+        
+            <div class="row">
+                <div class="form-group"><label>Birth Place</label><input type="text" id="birth_place"></div>
+                <div class="form-group"><label>Nationality</label>
+                    <select id="nationality">
+                        <option value="Indian">Indian</option>
+                        <option value="Outsiders">Outsiders</option>
+                    </select>
+                </div>
+                <div class="form-group"><label>Caste Category</label>
+                    <select id="caste_category">
+                        <option value="OPEN">OPEN</option>
+                        <option value="SC-ST">SC-ST</option>
+                        <option value="Others">Others</option>
+                    </select>
+                </div>
+                <div class="form-group"><label>ABC id</label><input type="number" id="abc_id" maxlength="50"></div>
+            </div>
+
+            <div class="row">
+                <div class="form-group"><label>Email ID</label><input type="email" id="email_id" required></div>
+            </div>
+        
+            <h2 style="color: #28a745;">Parents Info</h2>
+            <div class="row">
+                <div class="form-group"><label>Father's Name</label><input type="text" id="father_name"></div>
+                <div class="form-group"><label>Mother's Name</label><input type="text" id="mother_name"></div>
+                <div class="form-group"><label>Guardian/Parent Number</label><input type="number" id="guardian_number" maxlength="10"></div>
+                <div class="form-group"><label>Family Annual Income</label><input type="number" id="family_income"></div>
+            </div>
+        
+            <h2>Other Info</h2>
+            <div class="row">
+                <div class="form-group"><label>Aadhar Card Number</label><input type="number" id="aadhar_number"></div>
+            </div>
+        
+            <h2 style="color: #28a745;">Additional Info</h2>
+            <div class="row">
+                <div class="form-group"><label>12th Percentage</label><input type="number" id="percentage_12th" min="0" max="100"></div>
+                <div class="form-group"><label>Maths Marks</label><input type="number" id="maths_marks" min="0" max="100"></div>
+                <div class="form-group"><label>Department</label>
+                    <select id="branch">
+                        <option value="Science">Science</option>
+                        <option value="Commerce">Commerce</option>
+                    </select>
+                </div>
+            </div>
+            
+            <button onclick="nextSection()">Next</button>
+        </div>
+        
+
+        <div id="section2" class="section">
+            <h2 style="color: #28a745;">Address</h2>
+            
+            <div class="form-group">
+                <label>Country</label>
+                <select id="country">
+                    <option value="India">India</option>
+                    <option value="New Zealand">New Zealand</option>
+                    <option value="USA">USA</option>
+                    <option value="South Africa">South Africa</option>
                 </select>
             </div>
+        
+            <div class="form-group">
+                <label>State</label>
+                <input type="text" id="state">
+            </div>
+        
+            <div class="form-group">
+                <label>District</label>
+                <input type="text" id="district">
+            </div>
+        
+            <div class="form-group">
+                <label>City/Village</label>
+                <input type="text" id="city_village">
+            </div>
+        
             <button onclick="nextSection()">Next</button>
         </div>
 
-        <div id="section2" class="section">
-            <h2>Document Upload</h2>
+        <div id="section3" class="section">
+            <h2 style="color: #28a745;">Photo and Signature Details</h2>
+        
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+                <div style="padding: 20px; border: 2px dashed #ccc; text-align: center; border-radius: 8px;">
+                    <label for="student_photo"><strong>Upload Student Photo</strong></label>
+                    <input type="file" id="student_photo" accept="image/*" style="display: block; margin-top: 10px;">
+                </div>
+        
+                <div style="padding: 20px; border: 2px dashed #ccc; text-align: center; border-radius: 8px;">
+                    <label for="student_signature"><strong>Upload Student Signature</strong></label>
+                    <input type="file" id="student_signature" accept="image/*" style="display: block; margin-top: 10px;">
+                </div>
+        
+                <div style="padding: 20px; border: 2px dashed #ccc; text-align: center; border-radius: 8px;">
+                    <label for="parent_signature"><strong>Upload Parent Signature</strong></label>
+                    <input type="file" id="parent_signature" accept="image/*" style="display: block; margin-top: 10px;">
+                </div>
+            </div>
+        
+            <button onclick="nextSection()">Next</button>
+        </div>
+        
+        
+
+        <div id="section4" class="section">
+            <h2 style="color: #28a745;">Document Upload</h2>
             <div class="form-group"><label>10th Marksheet</label><input type="file" id="marksheet_10th"></div>
             <div class="form-group"><label>12th Marksheet</label><input type="file" id="marksheet_12th"></div>
             <div class="form-group"><label>12th Leaving Certificate</label><input type="file" id="leaving_cert"></div>
-            <button onclick="submitForm()">Submit Form</button>
+            <button onclick="downloadApplicationForm()" style="margin-top:20px; background-color: #28a745; color: white; padding: 10px 15px; border: none; cursor: pointer; margin-right: 20px; display: inline-block;">
+                Download Application
+            </button>
+            <button onclick="submitForm()" style="margin-top:20px; padding: 10px 15px; border: none; cursor: pointer; display: inline-block;">
+                Submit Form
+            </button>
+            
+            
+
         </div>
+
+
+        
     </div>
 
     <div id="popup" class="popup">
@@ -163,12 +362,66 @@
         <button onclick="redirectToHome()">Okay</button>
     </div>
 
-    <script>
-        function nextSection() {
-            document.getElementById('section1').classList.remove('active');
-            document.getElementById('section2').classList.add('active');
-        }
 
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+    function downloadApplicationForm() {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+
+    // Extract form values
+    const studentDetails = {
+        "First Name": document.getElementById('first_name').value,
+        "Last Name": document.getElementById('last_name').value,
+        "Date of Birth": document.getElementById('dob').value,
+        "Email": document.getElementById('email_id').value,
+        "Mobile Number": document.getElementById('mobile_number').value,
+        "Percentage in 12th": document.getElementById('percentage_12th').value,
+        "Maths Marks": document.getElementById('maths_marks').value,
+        "Branch": document.getElementById('branch').value,
+
+        "Country": document.getElementById('country').value,
+        "State": document.getElementById('state').value,
+        "District": document.getElementById('district').value,
+        "City/Village": document.getElementById('city_village').value
+    };
+
+    let y = 20; // Y-position in PDF
+
+    doc.setFontSize(14);
+    doc.text("Student Application Form", 10, y);
+    y += 10;
+
+    doc.setFontSize(12);
+    Object.keys(studentDetails).forEach(key => {
+        doc.text(`${key}: ${studentDetails[key]}`, 10, y);
+        y += 8;
+    });
+
+    // Save the PDF
+    doc.save("Application_Form.pdf");
+}
+
+</script>
+
+
+
+
+    <script>
+        let currentSection = 1;
+    
+        function nextSection() {
+            const totalSections = 4;
+            if (currentSection < totalSections) {
+                document.getElementById(`section${currentSection}`).classList.remove('active');
+                currentSection++;
+                document.getElementById(`section${currentSection}`).classList.add('active');
+            }
+        }
+    
         function submitForm() {
             // Collect form data
             const student = {
@@ -180,30 +433,30 @@
                 percentage_12th: parseFloat(document.getElementById('percentage_12th').value),
                 maths_marks: parseInt(document.getElementById('maths_marks').value),
                 branch: document.getElementById('branch').value.toLowerCase(),
-                // File inputs are not stored in localStorage (client-side limitation), handle them server-side if needed
             };
-
+    
             // Validate required fields
-            if (!student.first_name || !student.last_name || !student.dob || !student.email_id ||
-                !student.mobile_number || !student.percentage_12th || !student.maths_marks || !student.branch) {
-                alert("Please fill all required fields.");
-                return;
-            }
-
+            // if (!student.first_name || !student.last_name || !student.dob || !student.email_id ||
+            //     !student.mobile_number || !student.percentage_12th || !student.maths_marks || !student.branch) {
+            //     alert("Please fill all required fields.");
+            //     return;
+            // }
+    
             // Get existing students from localStorage or initialize empty array
             let storedStudents = JSON.parse(localStorage.getItem('students')) || [];
             storedStudents.push(student);
             localStorage.setItem('students', JSON.stringify(storedStudents));
-
+    
             // Show popup and reset form
             document.getElementById('popup').style.display = 'block';
             document.querySelector('form')?.reset();
         }
-
+    
         function redirectToHome() {
             window.location.href = 'root.html'; // Redirect to merit list instead of root.html
         }
     </script>
+    
 </body>
 
 </html>
